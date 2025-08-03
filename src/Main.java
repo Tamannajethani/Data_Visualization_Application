@@ -9,7 +9,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
        FXMLLoader loader=new FXMLLoader(getClass().getResource("main.fxml"));
        Scene scene=new Scene(loader.load(),1200,800);
-       primaryStage.setTitle("Data Visualization Tool");
+       primaryStage.setTitle("Data Visualization App");
        primaryStage.setScene(scene);
        primaryStage.setMaximized(true);
        primaryStage.show();
