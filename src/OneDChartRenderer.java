@@ -16,9 +16,9 @@ public class OneDChartRenderer implements ChartRenderer {
         {
             return renderPieChart(csvFile);
         }
-        else if(chartType.equalsIgnoreCase("Histogram"))
+        else if(chartType.equalsIgnoreCase("Bar Graph"))
         {
-            return renderHistogramChart(csvFile);
+            return renderBarChart(csvFile);
 
         }
         return new StackPane();
@@ -60,7 +60,7 @@ public class OneDChartRenderer implements ChartRenderer {
         return pieChart;
     }
 
-    private BarChart<String ,Number> renderHistogramChart(File file)
+    private BarChart<String ,Number> renderBarChart(File file)
     {
         List<String> labels=new ArrayList<>();
         List<Double> values=new ArrayList<>();
@@ -81,7 +81,7 @@ public class OneDChartRenderer implements ChartRenderer {
 
                 if(parts.length>=2)
                 {
-                     labels.add(parts[0].trim());
+                    labels.add(parts[0].trim());
                     values.add(Double.parseDouble(parts[1].trim()));
                 }
             }
@@ -95,15 +95,15 @@ public class OneDChartRenderer implements ChartRenderer {
         xAxis.setLabel("Category");
         yAxis .setLabel("Frequency");
 
-        BarChart<String,Number> histogram=new BarChart<>(xAxis,yAxis);
-        histogram.setTitle("Histogram");
+        BarChart<String,Number> bargraph=new BarChart<>(xAxis,yAxis);
+        bargraph.setTitle("Bar Graph");
 
         XYChart.Series<String, Number> series = new XYChart.Series<>();
-            for(int i=0;i< labels.size();i++)
-            {
-                series.getData().add(new XYChart.Data<>(labels.get(i),values.get(i) ));
-            }
-        histogram.getData().add(series);
-            return histogram;
+        for(int i=0;i< labels.size();i++)
+        {
+            series.getData().add(new XYChart.Data<>(labels.get(i),values.get(i) ));
+        }
+        bargraph.getData().add(series);
+        return bargraph;
     }
 }
