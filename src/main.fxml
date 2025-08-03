@@ -2,12 +2,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Pos?>
 <?import javafx.scene.text.*?>
 
-
-<?import javafx.scene.chart.ScatterChart?>
-<?import javafx.scene.chart.StackedAreaChart?>
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
     <top>
         <VBox spacing="20" alignment="CENTER">
@@ -23,7 +19,7 @@
 
         <HBox spacing="10" alignment="CENTER">
             <Label text="Select Data Type:"/>
-            <ComboBox fx:id="dataTypeCombo" promptText="1D, 2D or Geo"/>
+            <ComboBox fx:id="dataTypeCombo" promptText="1D or 2D "/>
         </HBox>
 
             <HBox spacing="10" alignment="CENTER">
@@ -37,7 +33,6 @@
             <HBox alignment="CENTER">
                 <Button text="Visualize Chart" onAction="#handleVisualizeButton" prefWidth="150"/>
             </HBox>
-
         </VBox>
     </top>
 
@@ -48,4 +43,14 @@
             </padding>
         </StackPane>
     </center>
+    <bottom>
+        <VBox spacing="20" alignment="CENTER">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+            <HBox alignment="CENTER">
+                <Button fx:id="exportButton" text="Export Chart" onAction="#handleExportButton" prefWidth="150" visible="false"/>
+            </HBox>
+        </VBox>
+    </bottom>
 </BorderPane>
