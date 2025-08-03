@@ -1,0 +1,83 @@
+🔖 Project Title: Data Visualization App using JavaFX
+________________________________________
+1. 📌 Project Objective
+The objective of this project is to develop a user-friendly desktop application in Java using JavaFX that allows users to:
+•	Upload CSV files
+•	Select between 1D and 2D data types
+•	Visualize data using appropriate chart types
+•	Export the generated charts as PNG images
+This tool is intended for quick, visual insights from structured data, and supports modularity, usability, and extendability.
+________________________________________
+2. 🧰 Technology Stack
+Component	Tool/Library
+Language	Java 17
+GUI Framework	JavaFX (FXML-based)
+IDE	IntelliJ IDEA
+CSV Parsing	Java IO (BufferedReader)
+Charting API	JavaFX Chart Components
+Export	SwingFXUtils + ImageIO
+________________________________________
+3. 🗂️ Project Features
+•	📂 File Upload: Upload CSV files via JavaFX FileChooser
+•	📊 Chart Types Supported:
+o	Pie Chart
+o	Bar Graph
+o	Line Chart
+o	Scatter Plot
+o	Bubble Chart
+•	🔄 Dynamic Selection:
+o	ComboBoxes for selecting data type and chart type
+o	Charts generated dynamically based on selection
+•	🖼 Export Capability:
+o	Charts can be exported as PNG images
+o	Export button only appears after chart is rendered
+•	📎 Error Handling:
+o	Alerts for invalid files or unsupported chart types
+o	Skips invalid rows in CSV without crashing
+________________________________________
+4. 🔧 Architecture Overview
+•	ChartRenderer interface defines the common render() method
+•	OneDChartRenderer handles Pie and Bar charts
+•	TwoDChartRenderer handles Line, Scatter, and Bubble charts
+•	MainController manages user interactions and routes data to the appropriate renderer
+•	FXML defines layout using VBox, HBox, and StackPane for flexible UI
+________________________________________
+5. 📁 Folder Structure
+
+DataVisualizationTool/
+|---src/
+│   ├── Main.java
+│   ├── MainController.java
+│   ├── ChartRenderer.java
+│   ├── OneDChartRenderer.java
+│   └── TwoDChartRenderer.java
+│   └──main.fxml
+|---sample_csv/
+│   ├── sample_pie.csv
+│   ├── sample_bar.csv
+│   ├── sample_line.csv
+│   ├── sample_scatter.csv
+│   └── sample_bubble.csv
+└── README.md
+└── Data_Visualization_App_Documenation.docx
+
+6. 🧪 Testing
+Tested with all chart types using valid and invalid CSVs. Verified:
+•	Correct rendering
+•	Graceful handling of errors
+•	Chart export success
+•	Layout consistency
+8. 📚 Learnings
+•	Learned JavaFX layout and FXML structure
+•	Gained experience in dynamic UI updates and chart APIs
+•	Understood clean architecture using interfaces and renderers
+•	Practiced real-world usability concerns (error handling, export logic, modularity)
+________________________________________
+9. ✅ Conclusion
+The project was successfully completed with all planned features:
+•	Clean UI
+•	Full chart rendering capability
+•	Image export
+•	Sample data and documentation
+
+
