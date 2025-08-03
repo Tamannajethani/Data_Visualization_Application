@@ -37,6 +37,10 @@ This JavaFX-based desktop application allows users to visualize data from CSV fi
 ## Export Feature 
 
 - After a chart is displayed, click "Export Chart" to save the image as .png. A confirmation message will appear with the save location.
+  
+## Internship Task - Next24tech
+
+This project is Task3 for the Java Development Internship at Next24tech.
 
 ## Author
 Tamanna Jethani
